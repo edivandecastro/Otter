@@ -4,7 +4,7 @@ import { RequestOrder } from './types/api';
 
 export const REPO_URL = 'https://github.com/mrmartineau/Otter';
 
-export const ALLOW_SIGNUP = false;
+export const ALLOW_SIGNUP = true;
 export const CONTENT = {
   appName: 'Otter',
   titleSeparator: ' — ',
@@ -65,9 +65,8 @@ export const CONTENT = {
 export const createTitle = (pageName?: string) => {
   // @ts-ignore
   const theTitle = pageName ? CONTENT[pageName] || pageName : '';
-  return `${theTitle ? `${theTitle}${CONTENT.titleSeparator}` : ''}${
-    CONTENT.appName
-  }`;
+  return `${theTitle ? `${theTitle}${CONTENT.titleSeparator}` : ''}${CONTENT.appName
+    }`;
 };
 
 // Page Routes
