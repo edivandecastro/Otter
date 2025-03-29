@@ -12,6 +12,7 @@ export type Database = {
       bookmarks: {
         Row: {
           click_count: number
+          collection: string | null
           created_at: string
           description: string | null
           feed: string | null
@@ -31,6 +32,7 @@ export type Database = {
         }
         Insert: {
           click_count?: number
+          collection?: string | null
           created_at?: string
           description?: string | null
           feed?: string | null
@@ -50,6 +52,7 @@ export type Database = {
         }
         Update: {
           click_count?: number
+          collection?: string | null
           created_at?: string
           description?: string | null
           feed?: string | null
@@ -209,6 +212,14 @@ export type Database = {
       }
     }
     Views: {
+      collection_tags_view: {
+        Row: {
+          bookmark_count: number | null
+          collection: string | null
+          tags: string[] | null
+        }
+        Relationships: []
+      }
       tags_count: {
         Row: {
           count: number | null
@@ -231,6 +242,7 @@ export type Database = {
         }
         Returns: {
           click_count: number
+          collection: string | null
           created_at: string
           description: string | null
           feed: string | null
