@@ -38,7 +38,7 @@ export const getBookmarks = async ({
   }
   if (tag) {
     if (tag === 'Untagged') {
-      query = query.eq('tags', '{}');
+      query = query.eq('tags', []);
     } else {
       query = query.filter('tags', 'cs', `{${tag}}`);
     }
