@@ -261,6 +261,14 @@ export type Database = {
           user: string | null
         }[]
       }
+      update_bookmark_tags: {
+        Args: {
+          old_tag: string
+          new_tag: string
+          user_id: string
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       status: "active" | "inactive"
