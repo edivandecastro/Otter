@@ -264,6 +264,31 @@ export type Database = {
           user: string | null
         }[]
       }
+      get_bookmarks_by_collection: {
+        Args: {
+          collection_name: string
+        }
+        Returns: {
+          click_count: number
+          collection: string | null
+          created_at: string
+          description: string | null
+          feed: string | null
+          id: string
+          image: string | null
+          modified_at: string
+          note: string | null
+          public: boolean
+          star: boolean
+          status: Database["public"]["Enums"]["status"]
+          tags: string[] | null
+          title: string | null
+          tweet: Json | null
+          type: Database["public"]["Enums"]["type"] | null
+          url: string | null
+          user: string | null
+        }[]
+      }
       update_bookmark_tags: {
         Args: {
           old_tag: string
